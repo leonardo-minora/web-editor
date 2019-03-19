@@ -3,8 +3,9 @@ import brace from 'brace';
 import AceEditor from 'react-ace';
 
 // components
-import Editor from '../components/Editor'
-import Navbar from '../components/Navbar'
+import Editor from '../components/Editor';
+import Navbar from '../components/Navbar';
+import Output from '../components/Output';
 
 // editor themes
 import 'brace/mode/javascript';
@@ -17,7 +18,8 @@ class EditorFUll extends Component {
       <div>
         <Navbar />
         <div className="wrapper">
-  			   <Editor />
+  			   	<Editor />
+					 	<Output />
         </div>
       </div>
 		);

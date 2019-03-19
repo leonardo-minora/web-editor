@@ -7,6 +7,7 @@ body {
   font-family: helvetica;
   font-weight: 400;
 	overflow: hidden;
+	background-color: #1d1f21;
 }
 
 .navbar {
@@ -35,20 +36,24 @@ body {
 }
 
 /* wrapper */
-.wrapper #editor-potigol {
-	box-sizing: border-box;
+.wrapper{
+	display: flex
 }
 
-.wrapper > .code-editor-main > .nav-file {
+.wrapper .code-editor-main {
+	width: 60%;
+}
+
+.wrapper > .code-editor-main  .nav-file {
 	background-color: #1d1f21;
 	box-sizing: border-box;
-	border-top: 1px solid #ced2cf24;
-	border-bottom: 1px solid #ced2cf24;
+	/*border-top: 1px solid #ced2cf24;*/
+	border-bottom: 1px solid #333333;
 	padding: 10px 0 10px 10px;
 	color: #c5c8a0;
 }
 
-.wrapper > .code-editor-main > .nav-file > .file-run {
+.wrapper > .code-editor-main  .nav-file > .file-run {
 	display: flex;
 	cursor: pointer;
 	user-select: none;
@@ -56,17 +61,42 @@ body {
 	transition: all .2s ease;
 }
 
-.wrapper > .code-editor-main > .nav-file > .file-run:hover {
+.wrapper > .code-editor-main  .nav-file > .file-run:hover {
 	opacity: 1;
 }
 
-.wrapper > .code-editor-main > .nav-file > .file-run > .icon img {
+.wrapper > .code-editor-main  .nav-file > .file-run > .icon img {
 	width: 25px;
 	height: 25px;
 }
 
-.wrapper > .code-editor-main > .nav-file > .file-run > .title {
+.wrapper > .code-editor-main  .nav-file > .file-run > .title {
 	font-size: 15px;
 	line-height: 25px;
 	margin: 0 0 0 10px;
+}
+
+/* scrollbar*/
+::-webkit-scrollbar {
+   width: 10px;
+   height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border: solid 0 rgba(0, 0, 0, 0);
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: none;
+		background-color: #323538
+}
+
+/* output */
+.output-side {
+	width: 40%;
+	height: 100vh;
+	border-left: 1px solid #333333;
+}
+
+/* jerimum */
+#jerimum-preview {
+	height: calc(80vh - 104px);
+	border-bottom: 1px solid #333333;
 }
